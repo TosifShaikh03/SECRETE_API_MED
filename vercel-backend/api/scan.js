@@ -5,7 +5,7 @@ export default async function handler(req, res) {
         if (!text)
             return res.status(400).json({ error: "Missing text" });
 
-        const openaiRes = await fetch("https://api.openai.com/v1/chat/completions", {
+        const openaiRes = await fetch(""https://vercel-backend.vercel.app/api/scan",", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -37,3 +37,4 @@ Return JSON array:
         res.status(500).json({ error: err.message });
     }
 }
+
